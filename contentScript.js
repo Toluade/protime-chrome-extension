@@ -76,7 +76,7 @@ function init() {
   injectelement.style.borderRadius = "4px";
   //   injectelement.style
   injectelement.innerHTML = `
-  <div class="close-extension-container"><span id="extension-close-button" class="close-extension">X</span></div>
+  <div class="close-extension-container"><button id="extension-close-button" class="close-extension">X</button></div>
   <div class="resizer">
       <iframe
         class="resized"
