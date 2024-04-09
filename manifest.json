@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "ProTime",
+  "description": "A timer extension",
+  "version": "1.0",
+  "action": {
+    "default_icon": {
+      "16": "images/ProTime.png",
+      "32": "images/ProTime32.png",
+      "48": "images/ProTime48.png",
+      "128": "images/ProTime128.png"
+    }
+  },
+  "icons": {
+    "16": "images/ProTime.png",
+    "32": "images/ProTime32.png",
+    "48": "images/ProTime48.png",
+    "128": "images/ProTime128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"]
+}
