@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* body {
+        height: 10svh;
+        width: 100svw;
+      } */
+      #protime-container {
+        min-width: 300px;
+        min-height: 150px;
+        margin: 0;
+        position: fixed;
+        padding: 10px;
+        background: black;
+        white-space: nowrap;
+        display: inline-block;
+        /* outline: 2px red solid; */
+        /* outline-offset: 20px; */
+        cursor: move;
+        border-radius: 4px;
+      }
+      .resizer {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        resize: both;
+        overflow: hidden;
+      }
+      .resizer > .resized {
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+    </style>
+    <title>ProTime</title>
+  </head>
+  <!-- <body> -->
+  <body id="protime-container" draggable="true">
+    <div class="resizer">
+      <iframe
+        class="resized"
+        src="https://protime-v2.netlify.app"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <!-- </body> -->
+</html>
