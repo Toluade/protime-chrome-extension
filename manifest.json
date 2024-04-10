@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ProTime",
-  "description": "A timer extension",
+  "description": "Display a resizeable and draggable timer on your browser screen",
   "version": "1.0",
   "action": {
     "default_icon": {
@@ -27,5 +27,5 @@
       "matches": ["*://*/*"]
     }
   ],
-  "permissions": ["storage", "activeTab", "scripting"]
+  "permissions": ["scripting"]
 }
