@@ -1,63 +1,63 @@
-const styles = `
-#protime-container {
-  min-width: 300px;
-  min-height: 150px;
-  margin: 0;
-  position: fixed;
-  padding: 10px;
-  background: transparent;
-  white-space: nowrap;
-  display: inline-block;
-  cursor: move;
-  border-radius: 4px;
-  transition: 0.3s;
-
-  &:hover {
-    border: 1px dashed black;
-  }
-}
-.resizer {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  resize: both;
-  overflow: hidden;
-}
-.resizer > .resized {
-  flex-grow: 1;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-.close-extension-container {
-  display: flex;
-  justify-content: end;
-  padding-block: 5px;
-}
-.close-extension {
-  cursor: pointer;
-  color: black;
-  visibility: hidden;
-}
-#protime-container:hover {
-  .close-extension {
-    visibility: visible;
-  }
-}
-@media (prefers-color-scheme: dark) {
+function init() {
+  const styles = `
   #protime-container {
+    min-width: 300px;
+    min-height: 150px;
+    margin: 0;
+    position: fixed;
+    padding: 10px;
+    background: transparent;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: move;
+    border-radius: 4px;
+    transition: 0.3s;
+  
     &:hover {
-      border: 1px dashed white;
+      border: 1px dashed black;
     }
   }
-  .close-extension {
-    color: white;
+  .resizer {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    resize: both;
+    overflow: hidden;
   }
-}
-`;
-
-function init() {
+  .resizer > .resized {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .close-extension-container {
+    display: flex;
+    justify-content: end;
+    padding-block: 5px;
+  }
+  .close-extension {
+    cursor: pointer;
+    color: black;
+    visibility: hidden;
+  }
+  #protime-container:hover {
+    .close-extension {
+      visibility: visible;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    #protime-container {
+      &:hover {
+        border: 1px dashed white;
+      }
+    }
+    .close-extension {
+      color: white;
+    }
+  }
+  `;
   const styleSheet = document.createElement("style");
+  styleSheet.setAttribute("id", "protime-extension-styles");
   styleSheet.innerText = styles;
   const injectelement = document.createElement("div");
   injectelement.setAttribute("id", "protime-container");
